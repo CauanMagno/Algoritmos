@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Cauan.Magno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-01-24 10:48:26 "/>
+        <attribute name="created" value="Q2F1YW4uTWFnbm87REVTS1RPUC05RTJOT0VGOzIwMjQtMDEtMjQ7IjA5OjQzOjQwICI7MzI3Nw=="/>
+        <attribute name="edited" value="Q2F1YW4uTWFnbm87REVTS1RPUC05RTJOT0VGOzIwMjQtMDEtMjQ7IjEwOjQ4OjI2ICI7MTszMzg2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, soma" type="Integer" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <assign variable="soma" expression="a+b+c"/>
+            <output expression="soma" newline="True"/>
+            <declare name="media" type="Real" array="False" size=""/>
+            <assign variable="media" expression="(a+b+c)/3"/>
+            <output expression="media" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

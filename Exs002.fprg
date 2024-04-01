@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Cauan.Magno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-01-24 11:23:48 "/>
+        <attribute name="created" value="Q2F1YW4uTWFnbm87REVTS1RPUC05RTJOT0VGOzIwMjQtMDEtMjQ7IjEwOjUxOjIzICI7MzI2OQ=="/>
+        <attribute name="edited" value="Q2F1YW4uTWFnbm87REVTS1RPUC05RTJOT0VGOzIwMjQtMDEtMjQ7IjExOjIzOjQ4ICI7MzszMzg2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="a, b, c, delta" type="Real" array="False" size=""/>
+            <input variable="a"/>
+            <input variable="b"/>
+            <input variable="c"/>
+            <assign variable="delta" expression="b^2-4*a*c"/>
+            <output expression="delta" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

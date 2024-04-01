@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Cauan.Magno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-01-31 08:01:04 "/>
+        <attribute name="created" value="Q2F1YW4uTWFnbm87REVTS1RPUC05RTJOT0VGOzIwMjQtMDEtMzE7IjA3OjM2OjUxICI7MzI3Nw=="/>
+        <attribute name="edited" value="Q2F1YW4uTWFnbm87REVTS1RPUC05RTJOT0VGOzIwMjQtMDEtMzE7IjA4OjAxOjA0ICI7MTszMzc2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nome" type="String" array="False" size=""/>
+            <input variable="nome"/>
+            <output expression="&quot;Bom dia, &quot;&amp; nome" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Cauan.Magno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-05 08:25:23 "/>
+        <attribute name="created" value="Q2F1YW4uTWFnbm87REVTS1RPUC05RTJOT0VGOzIwMjQtMDItMDU7IjA4OjA0OjI3ICI7MzI3OA=="/>
+        <attribute name="edited" value="Q2F1YW4uTWFnbm87REVTS1RPUC05RTJOT0VGOzIwMjQtMDItMDU7IjA4OjI1OjIzICI7MjszMzg2"/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="ano" type="Integer" array="False" size=""/>
+            <declare name="mes" type="String" array="False" size=""/>
+            <input variable="ano"/>
+            <declare name="lBissexto" type="Boolean" array="False" size=""/>
+            <assign variable="lBissexto" expression="ehBissexto(ano)"/>
+            <if expression="lBissexto">
+                <then>
+                    <assign variable="mes" expression="ano &amp; &quot; e bissexto&quot;"/>
+                    <output expression="mes" newline="True"/>
+                </then>
+                <else>
+                    <assign variable="mes" expression="ano &amp; &quot; n&#227;o e bissexto&quot;"/>
+                    <output expression="mes" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+    <function name="ehBissexto" type="Boolean" variable="res">
+        <parameters>
+            <parameter name="ano" type="Integer" array="False"/>
+        </parameters>
+        <body>
+            <declare name="res" type="Boolean" array="False" size=""/>
+            <assign variable="res" expression="(ano %4 == 0 &amp;&amp; ano %100 != 0) || ano %400 == 0"/>
+        </body>
+    </function>
+</flowgorithm>

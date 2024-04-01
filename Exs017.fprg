@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.0">
+    <attributes>
+        <attribute name="name" value=""/>
+        <attribute name="authors" value="Cauan.Magno"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2024-02-07 11:22:05 "/>
+        <attribute name="created" value="Q2F1YW4uTWFnbm87TlQzODsyMDI0LTAyLTA3OyIxMDoyNTowMiAiOzI0ODM="/>
+        <attribute name="edited" value="Q2F1YW4uTWFnbm87TlQzODsyMDI0LTAyLTA3OyIxMToyMjowNSAiOzM7MjU5NA=="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="salariob, diast, salarioliqui, inss, ir, salariofinal, valer, valet" type="Integer" array="False" size=""/>
+            <declare name="nome" type="String" array="False" size=""/>
+            <input variable="nome"/>
+            <input variable="salariob"/>
+            <input variable="diast"/>
+            <assign variable="salariob" expression="(salariob / 30)* diast"/>
+            <if expression="salariob&gt;0 &amp;&amp; salariob&lt;=1412">
+                <then>
+                    <assign variable="inss" expression="salariob*0.075"/>
+                </then>
+                <else>
+                    <if expression="salariob &gt;1412 &amp;&amp; salariob &lt;=2668.68">
+                        <then>
+                            <assign variable="inss" expression="salariob*0.09"/>
+                        </then>
+                        <else>
+                            <if expression="salariob&gt;2666.69 &amp;&amp; salariob &lt;=4000.03">
+                                <then>
+                                    <assign variable="inss" expression="salariob*1.2"/>
+                                </then>
+                                <else>
+                                    <if expression="salariob&gt; 4000.04 &amp;&amp; salariob &lt;=7786.02">
+                                        <then>
+                                            <assign variable="inss" expression="salariob*1.4"/>
+                                        </then>
+                                        <else>
+                                            <if expression="salariob&gt; 7786.02">
+                                                <then>
+                                                    <assign variable="inss" expression="inss=908.86"/>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <output expression="inss" newline="True"/>
+            <if expression="salariob &gt;0 &amp;&amp; salariob&lt;= 2112">
+                <then>
+                    <assign variable="ir" expression="0"/>
+                </then>
+                <else>
+                    <if expression="salariob&gt; 2212 &amp;&amp; salariob&lt;= 2826.65">
+                        <then>
+                            <assign variable="ir" expression="salariob*0.075-158.40"/>
+                        </then>
+                        <else>
+                            <if expression="salariob&gt;2825.65 &amp;&amp; salariob&lt;= 3751.05">
+                                <then>
+                                    <assign variable="ir" expression="salariob*0.15-370.40"/>
+                                </then>
+                                <else>
+                                    <if expression="salariob&gt;3751.05 &amp;&amp; salariob&lt;= 4664.68">
+                                        <then>
+                                            <assign variable="ir" expression="salariob*0.225-651.73"/>
+                                        </then>
+                                        <else>
+                                            <if expression="salariob&gt; 4664.68">
+                                                <then>
+                                                    <assign variable="ir" expression="salariob*0.275-884.96"/>
+                                                </then>
+                                                <else/>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                            <output expression="ir" newline="True"/>
+                        </else>
+                    </if>
+                </else>
+            </if>
+            <assign variable="valet" expression="salariob*0.06"/>
+            <assign variable="valer" expression="salariob* 0.01"/>
+            <assign variable="salariofinal" expression="salariob-ir-inss-valer-valet"/>
+            <output expression="salariofinal" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
